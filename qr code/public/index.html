@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <div id="qrcode" style="width: 200px; height: 200px;"></div>
+    <script src="https://unpkg.com/qr-code-styling/lib/qr-code-styling.min.js"></script>
+    <script>
+        const qrCode = new QRCodeStyling({
+            width: 200,
+            height: 200,
+            data: "http://localhost:3000",
+        });
+
+        qrCode.append(document.getElementById("qrcode"));
+    </script>
+</body>
+</html>
